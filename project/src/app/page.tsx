@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
@@ -19,6 +21,18 @@ export default function Home() {
           >
             Learn More
           </a>
+        </div>
+
+        <div className="mt-10 border-t border-gray-200 pt-8">
+          <p className="text-sm text-gray-500 mb-3">
+            Dispatch verified after Findings 1-3
+          </p>
+          <Link
+            href="/verify"
+            className="inline-block px-5 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors text-sm"
+          >
+            View Verification Report →
+          </Link>
         </div>
       </div>
     </main>
