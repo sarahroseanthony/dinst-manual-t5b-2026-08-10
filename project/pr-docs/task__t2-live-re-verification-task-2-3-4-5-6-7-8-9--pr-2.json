@@ -1,0 +1,31 @@
+{
+  "overview": "This PR wires up a Jest test infrastructure for the Next.js 14 project and adds a smoke test for the root page, as part of the T2 live re-verification task (Findings 1-3). It introduces jest.config.js with ts-jest and jsdom, a placeholder setup file, and updates package.json with all required test dependencies and a test script.",
+  "summary_json": {
+    "test command": "jest --passWithNoTests",
+    "test environment": "jest-environment-jsdom",
+    "transformer": "ts-jest (tsx/ts files, react-jsx)",
+    "new dev deps": "jest, ts-jest, jest-environment-jsdom, @types/jest, @testing-library/react, @testing-library/jest-dom",
+    "test match patterns": "**/__tests__/**/*.test.ts, **/__tests__/**/*.test.tsx",
+    "path alias": "@/ → <rootDir>/src/"
+  },
+  "files_changed": [
+    {
+      "path": "project/jest.config.js",
+      "summary": "Adds Jest config using ts-jest preset, jsdom environment, @/ path alias, and tsx/ts transform with react-jsx support."
+    },
+    {
+      "path": "project/jest.setup.js",
+      "summary": "Placeholder global test setup file reserved for future jest-dom or other global matcher imports."
+    },
+    {
+      "path": "project/package.json",
+      "summary": "Adds test script and all Jest/Testing Library dev dependencies needed to run the new test suite."
+    },
+    {
+      "path": "project/src/__tests__/page.test.tsx",
+      "summary": "Smoke test that renders the root Page component and asserts the container is truthy."
+    }
+  ],
+  "extras": "Verify: run `npm install && npm test` in the project directory — all tests should pass. Follow-up: jest.setup.js is not yet wired into jest.config.js (setupFilesAfterFramework is missing); add it if jest-dom matchers are needed in tests.",
+  "fallback_text": "PR #2 (T2 live re-verification task) sets up Jest for a Next.js 14 + TypeScript project. It adds jest.config.js (ts-jest, jsdom, @/ alias), a stub jest.setup.js, updates package.json with a test script and all testing devDependencies, and introduces a single smoke test that renders the root page. The setup file is not yet registered in jest.config.js, so jest-dom matchers won't load automatically until that's wired up."
+}
