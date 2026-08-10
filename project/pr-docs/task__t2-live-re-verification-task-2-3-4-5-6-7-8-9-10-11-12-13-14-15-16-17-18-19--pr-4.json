@@ -1,0 +1,23 @@
+{
+  "overview": "This PR adds a smoke test suite to verify dispatch health after Findings 1-3 (scaffold file integrity, TypeScript/tsconfig path-alias consistency, Next.js config correctness). The test uses Node's built-in test runner so no extra npm dependencies are needed. A test script was wired into package.json to run the suite.",
+  "summary_json": {
+    "PR": "T2 live re-verification task — verify dispatch after Findings 1-3",
+    "Branch": "task/t2-live-re-verification-task-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19",
+    "Test command": "node --test src/__tests__/smoke.test.mjs (via npm test)",
+    "Test runner": "Node built-in node:test + node:assert/strict — no extra packages",
+    "Findings covered": "Finding 1 (scaffold integrity), Finding 2 (TS/tsconfig path aliases), Finding 3 (Next.js config)",
+    "Breaking changes": "None"
+  },
+  "files_changed": [
+    {
+      "path": "project/package.json",
+      "summary": "Adds a `test` script pointing to the new smoke test via Node's built-in runner."
+    },
+    {
+      "path": "project/src/__tests__/smoke.test.mjs",
+      "summary": "New smoke test suite that asserts scaffold file integrity, tsconfig path-alias consistency, and Next.js config correctness after Findings 1-3 resolution."
+    }
+  ],
+  "extras": "To verify: run `npm test` inside `project/`; all assertions should pass against the resolved scaffold. Follow-up: preview was truncated for smoke.test.mjs — confirm full assertion coverage of all three findings before merge.",
+  "fallback_text": "PR #4 (T2 live re-verification task) wires up a Node-native smoke test to confirm the project scaffold is healthy after resolving Findings 1-3. package.json gains a test script (`node --test src/__tests__/smoke.test.mjs`). The new smoke.test.mjs checks scaffold file existence, TypeScript tsconfig path-alias correctness, and Next.js config validity using only node:test and node:assert — no new runtime deps. No breaking changes. Run `npm test` inside project/ to verify; note the test file preview was truncated so full assertion coverage should be confirmed before merging."
+}
