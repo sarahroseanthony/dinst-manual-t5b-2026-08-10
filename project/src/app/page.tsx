@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
@@ -20,6 +22,14 @@ export default function Home() {
             Learn More
           </a>
         </div>
+        <p className="mt-8">
+          <Link
+            href="/verify"
+            className="text-sm text-blue-600 underline hover:text-blue-800"
+          >
+            View dispatch verification →
+          </Link>
+        </p>
       </div>
     </main>
   );
