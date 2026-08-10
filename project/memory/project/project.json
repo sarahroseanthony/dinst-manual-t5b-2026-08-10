@@ -1,13 +1,42 @@
 {
   "schemaVersion": "cofabric.memory.project.v2",
-  "name": "",
+  "name": "project",
   "oneLineDescription": "",
   "whatItIs": "",
-  "stack": [],
+  "stack": [
+    {
+      "name": "next",
+      "version": "^14.2.5",
+      "purpose": "React framework with App Router"
+    },
+    {
+      "name": "react",
+      "version": "^18.3.1",
+      "purpose": "UI component library"
+    },
+    {
+      "name": "react-dom",
+      "version": "^18.3.1",
+      "purpose": "React DOM renderer"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "^3.4.6",
+      "purpose": "Utility-first CSS framework"
+    },
+    {
+      "name": "typescript",
+      "version": "^5.5.3",
+      "purpose": "Static type checking"
+    }
+  ],
   "externalIntegrations": [],
   "coreUserFlows": [],
   "outOfScope": [],
   "dataModel": [],
-  "crossCuttingPrinciples": [],
-  "specSummary": ""
+  "crossCuttingPrinciples": [
+    "Use App Router with server components by default.",
+    "Use the @/ alias for all imports from the src/ directory."
+  ],
+  "specSummary": "No product specification was provided. The scaffold establishes a Next.js 14 project with TypeScript and Tailwind CSS using the App Router pattern. All application features, routes, components, business logic, API routes, database integration, auth, and third-party service integrations remain to be defined and built."
 }

@@ -2,18 +2,78 @@
   "schemaVersion": "cofabric.memory.scaffold.v1",
   "fileTree": [
     {
-      "path": "README.md",
-      "purpose": "Project readme documentation",
+      "path": "package.json",
+      "purpose": "Next.js 14 app with TypeScript and Tailwind CSS dev dependencies",
+      "isEmpty": false
+    },
+    {
+      "path": "tsconfig.json",
+      "purpose": "Strict TypeScript config with @/* path alias pointing to src/",
+      "isEmpty": false
+    },
+    {
+      "path": "next.config.js",
+      "purpose": "Minimal Next.js config with no experimental flags",
+      "isEmpty": false
+    },
+    {
+      "path": "postcss.config.js",
+      "purpose": "PostCSS with Tailwind and Autoprefixer plugins",
+      "isEmpty": false
+    },
+    {
+      "path": "tailwind.config.js",
+      "purpose": "Tailwind configured to scan all files under src/",
+      "isEmpty": false
+    },
+    {
+      "path": "src/app/globals.css",
+      "purpose": "Tailwind base/components/utilities imports plus minimal reset",
       "isEmpty": false
     },
     {
       "path": "src/app/layout.tsx",
-      "purpose": "Root layout component",
+      "purpose": "Root App Router layout with metadata, imports globals.css",
       "isEmpty": false
     },
     {
       "path": "src/app/page.tsx",
-      "purpose": "Root landing page",
+      "purpose": "Simple landing page with Tailwind styling and CTA buttons",
+      "isEmpty": false
+    },
+    {
+      "path": ".env.example",
+      "purpose": "Placeholder template for environment variables",
+      "isEmpty": false
+    },
+    {
+      "path": "pr-docs/.gitkeep",
+      "purpose": "Placeholder to keep pr-docs directory in version control",
+      "isEmpty": true
+    },
+    {
+      "path": "memory/.gitkeep",
+      "purpose": "Placeholder to keep memory directory in version control",
+      "isEmpty": true
+    },
+    {
+      "path": "memory/project/.gitkeep",
+      "purpose": "Placeholder to keep memory/project directory in version control",
+      "isEmpty": true
+    },
+    {
+      "path": "memory/task/.gitkeep",
+      "purpose": "Placeholder to keep memory/task directory in version control",
+      "isEmpty": true
+    },
+    {
+      "path": "memory/agent/.gitkeep",
+      "purpose": "Placeholder to keep memory/agent directory in version control",
+      "isEmpty": true
+    },
+    {
+      "path": "memory/context/.gitkeep",
+      "purpose": "Placeholder to keep memory/context directory in version control",
       "isEmpty": true
     }
   ],
@@ -24,7 +84,7 @@
       "path": "/",
       "file": "src/app/page.tsx",
       "httpMethods": null,
-      "isEmpty": true
+      "isEmpty": false
     }
   ],
   "databaseState": {
@@ -33,8 +93,28 @@
   },
   "intentionallyEmpty": [
     {
-      "file": "src/app/page.tsx",
-      "intendedPurpose": "Root landing page waiting for implementation"
+      "file": "pr-docs/.gitkeep",
+      "intendedPurpose": "Directory for pull request documentation files"
+    },
+    {
+      "file": "memory/.gitkeep",
+      "intendedPurpose": "Root memory directory for Cofabric agent memory files"
+    },
+    {
+      "file": "memory/project/.gitkeep",
+      "intendedPurpose": "Directory for project-level memory files"
+    },
+    {
+      "file": "memory/task/.gitkeep",
+      "intendedPurpose": "Directory for task-level memory files"
+    },
+    {
+      "file": "memory/agent/.gitkeep",
+      "intendedPurpose": "Directory for agent-level memory files"
+    },
+    {
+      "file": "memory/context/.gitkeep",
+      "intendedPurpose": "Directory for context-level memory files"
     }
   ]
 }
