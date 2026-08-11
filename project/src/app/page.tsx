@@ -1,3 +1,5 @@
+import VerificationStatus from '@/components/VerificationStatus';
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8">
@@ -19,6 +21,9 @@ export default function Home() {
           >
             Learn More
           </a>
+        </div>
+        <div className="mt-8">
+          <VerificationStatus />
         </div>
       </div>
     </main>
